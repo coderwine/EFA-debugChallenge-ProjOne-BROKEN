@@ -14,5 +14,3 @@
 
 **Gold:**
 - For Gold, we will be displaying 3 random restaurants within a collection of "hot spots" as images that we can then click and view in a new tab.  *Consider the limitations and if a user searches a location that may have less than 3 restaurants listed.
-
-**Hint:** There are 40 total errors through the complete project. 
