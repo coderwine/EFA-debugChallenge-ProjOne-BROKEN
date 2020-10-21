@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <title>Broken API App</title>
+</head>
+
+<body>
+
+    <!-- JUMBOTRON -->
+    <div class="jumbotron" id="jumbo">
+        <h1 class="display-4" id='jumboCity'></h1>
+
+        <!-- WEATHER -->
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="cityInput" placeholder="input city name" autocomplete="off">
+
+                <button type="submit" id="start-btn" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- DIPSPLAY WEATHER CARD -->
+        <div class="card mb-3 displayCard" style="max-width: 540px;"></div>
+    </div>
+
+    <!-- RESTAURANTS -->
+    <div class="foodCart" id="foodMain"></div>
+
+    <!-- PROGRAMMING QUOTES -->
+    <button type="button" id="nxtBtn" class="btn btn-dark btn-sm ">></button>
+
+    <div class="clearfix">
+        <nav class="navbar fixed-bottom navbar-light bg-light quote"></nav>
+    </div>
+
+    <!-- MODAL - DO NOT ALTER THIS CODE -->
+    <!-- Launch static backdrop modal -->
+
+    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-question-circle-fill modBTN" fill="red"
+        xmlns="http://www.w3.org/2000/svg" data-toggle="modal" data-target="#staticBackdrop" type="button">
+        <path fill-rule="evenodd"
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z" />
+    </svg>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog-scrollable modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">EFA Broken API Project I Instructions:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="bronze">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iure est alias perspiciatis dolor
+                            molestias ipsum quia aspernatur consectetur, similique voluptate labore rerum dicta! Labore
+                            consequatur exercitationem quod excepturi ut!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iure est alias perspiciatis dolor
+                            molestias ipsum quia aspernatur consectetur, similique voluptate labore rerum dicta! Labore
+                            consequatur exercitationem quod excepturi ut!</p>
+                    </div>
+                    
+                    <div id="silver">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iure est alias perspiciatis dolor
+                            molestias ipsum quia aspernatur consectetur, similique voluptate labore rerum dicta! Labore
+                            consequatur exercitationem quod excepturi ut!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iure est alias perspiciatis dolor
+                            molestias ipsum quia aspernatur consectetur, similique voluptate labore rerum dicta! Labore
+                            consequatur exercitationem quod excepturi ut!</p>
+                    </div>
+
+                    <div id="gold">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iure est alias perspiciatis dolor
+                            molestias ipsum quia aspernatur consectetur, similique voluptate labore rerum dicta! Labore
+                            consequatur exercitationem quod excepturi ut!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iure est alias perspiciatis dolor
+                            molestias ipsum quia aspernatur consectetur, similique voluptate labore rerum dicta! Labore
+                            consequatur exercitationem quod excepturi ut!</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DO NOT ALTER ABOVE MODAL CODE -->
+
+
+    <!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- SCRIPTS -->
+    <script src="./scripts/quotes.js"></script>
+    <script src="./weather.js"></script>
+</body>
+
+</html>

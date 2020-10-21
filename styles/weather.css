@@ -1,0 +1,43 @@
+/* JUMBOTRON */
+
+.jumbotron {
+    margin-bottom: 1em;
+    width: 100vw;
+    overflow-x: hiden;
+    scroll-behavior: smooth;
+    background-position: center;
+    background-size: cover;
+}
+
+.jumbotron h1 {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* FORM */
+
+form div {
+    display: grid
+    justify-content: center;
+}
+
+form div input {
+    margin-bottom: .5em;
+}
+
+/* WEATHER CARD */
+
+div .card {
+    margin-top: .5em;
+    padding: .5em;
+    background-color: rgba(255,255,255, .85);
+}
+
+div .card img {
+    justify-content: center;
+    align-self: center;
+}
+
+div .card ul {
+    list-style-type: none;
+}

@@ -1,0 +1,28 @@
+.foodCart {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#foodMain h4 {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+}
+
+.rest-Images {
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+@media {
+    #foodCart {
+        grid-auto-flow: row;
+    }
+} 
