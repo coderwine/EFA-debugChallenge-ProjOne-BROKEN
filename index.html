@@ -5,9 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <!-- MY CSS -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- DO NOT MODIFY STYLE CODE BELOW -->
+    <style>
+        
+/* DO NOT TOUCH MODAL CODE */
+.modal {
+    background-color: rgba(0,0,0, .75);
+}
+
+.modal-header {
+    background-color: darkred;
+    color: white;
+}
+
+.modal-header button span {
+    color: whitesmoke;
+}
+
+.modal-header img {
+    margin-right: .5em;
+}
+
+.modBTN {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    border: 1px solid white;
+    border-radius: 200px;
+}
+
+.modal-body #bronze {
+    padding: .2em;
+    border: 3px solid #80440d;
+    background-color: #da7618;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    box-shadow: 4px 4px 2px slategrey;
+}
+.modal-body #bronze h3 {
+    text-align: right;
+    color: #da7618;
+    text-shadow: 2px 2px 2px black;
+    margin-right: .5em;
+}
+
+.modal-body #silver {
+    padding: .2em;
+    border: 3px solid #575757;
+    background-color: #a2a2a2;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    box-shadow: 4px 4px 2px slategrey;
+}
+
+.modal-body #silver h3 {
+    text-align: right;
+    color: #a2a2a2;
+    text-shadow: 2px 2px 2px black;
+    margin-right: .5em;
+}
+
+.modal-body #gold {
+    padding: .2em;
+    border: 3px solid #5f5209;
+    background-color: #FFD700;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    box-shadow: 4px 4px 2px slategrey;
+}
+
+.modal-body #gold h3 {
+    text-align: right;
+    color: #FFD700;
+    text-shadow: 2px 2px 2px black;
+    margin-right: .5em;
+}
+
+.hintBTN {
+    margin-bottom: 2em;
+}
+/* DO NOT TOUCH ABOVE MODAL CODE */
+    </style>
+    <!-- DO NOT MODIFY STYLE CODE ABOVE -->
 
     <title>Broken API App</title>
 </head>
@@ -40,7 +126,7 @@
         <nav class="navbar fixed-bottom navbar-light bg-light quote"></nav>
     </div>
 
-    <!-- MODAL - DO NOT ALTER THIS CODE -->
+   <!-- MODAL - DO NOT ALTER THIS CODE -->
     
     <!-- Launch static backdrop modal -->
 
@@ -50,47 +136,66 @@
             d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z" />
     </svg>
 
-    <!-- Modal -->
+<!-- Modal -->
 
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog-scrollable modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">EFA Broken API Project I Instructions:</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <section>
-                        <p>This challenge has three different APIs that we are trying to fix.  The purpose of this challenge is to practice debugging a broken application to get it into a working format.  **DO NOT MODIFY THE MODAL**.  There are comments in the code warning against this.  EVERYTHING else is fair game.</p>
-                        <p>We are using Bootstrap and customized CSS.  Each API has its own JS and CSS files.  This isn't the cleanest code when completed but functional. This is not the fastest app. Feel free to clean it up if you so desire.  It will be important to consider the limitations of the APIs being used and read the docs provided.  In all levels of the challenge, it will be expected to fix issues within the JS and CSS files (possibly in relation to the HTML).  Remember to use console.log() to your advantage.</p>
-                    </section>
-                    <div id="bronze">
-                        <p>You will be focused on getting the Quote API functional.  Here is the link to the documentation for the Quote API.  The goal is to trigger a quote at the bottom of the page whenever the Submit Button is CLICKED.
-                            There will also be a "next" button that will allow us to generate a new quote.
-                        </p>
-                    </div>
-                    
-                    <div id="silver">
-                        <p>In this portion of the challenge, we will use an input to search a city name and create a card to display a quick readout of weather in that city.  We will also display our temperatures in Fahrenheit.  Here is the documentation for Weather Stack to look over.  We will be displaying the name of the location as well and changing the background of our display depending on the weather conditions.  *how can we test for those conditions?</p>
-                    </div>
-
-                    <div id="gold">
-                        <p>For Gold, we will be displaying 3 random restaurants within a collection of "hot spots" as images that we can then click and view in a new tab.  *Consider the limitations and if a user searches a location that may have less than 3 restaurants listed.</p>
-                    </div>
-
-                    <button onclick='() => {alert("There are 40 Total errors throughout the complete project")}'>hint...</button>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Understood</button>
-                </div>
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog-scrollable modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="./assets/EF.png" alt="Eleven Fifty Logo">
+            <h5 class="modal-title" id="staticBackdropLabel">EFA Broken API Project Instructions:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <section>
+                <p>This challenge has three different APIs that we are trying to fix.  The purpose of this challenge is to practice debugging a broken application to get it into a working format. </p>
+                <p>We are using Bootstrap and customized CSS.  Each API has its own JS and CSS files.  This isn't the cleanest code when completed but functional. This is not the fastest app. Feel free to clean it up if you so desire.  It will be important to consider the limitations of the APIs being used and read the docs provided.  In all levels of the challenge, it will be expected to fix issues within the JS and CSS files (possibly in relation to the HTML).  Remember to use console.log() to your advantage.</p>
+                <p><b>DO NOT MODIFY THE MODAL</b>.  There are comments in the code warning against this.  The only purpose of it is to provide instructions to this challenge <i style="font-size: xx-small;">(plus there are hints)</i>.  Everything else is fair game to modify, change up, comment up and make your own!</p>
+            </section>
+            <div id="bronze">
+                <h3>BRONZE</h3>
+                <p>You will be focused on getting the Quote API functional.  Here is the link to the documentation for the <a href='https://github.com/skolakoda/programming-quotes-api' target='_blank'>Quote API</a>.  The goal is to trigger a quote at the bottom of the page whenever the Submit Button is CLICKED.  There will also be a "next" button that will allow us to generate a new quote.
+                </p>
             </div>
+            
+            <div id="silver">
+                <h3>SILVER</h3>
+                <p>In this portion of the challenge, we will use an input to search a city name and create a card to display a quick readout of weather in that city.  We will also display our temperatures in Fahrenheit.  Here is the documentation for <a href="https://weatherstack.com/documentation" target="_blank">Weather Stack</a>  to look over.  We will be displaying the name of the location as well and changing the background of our display depending on the weather conditions.  *how can we test for those conditions?</p>
+            </div>
+
+            <div id="gold">
+                <h3>GOLD</h3>
+                <p>For Gold, we will be displaying 3 random restaurants within a collection of "hot spots" from <a href="https://developers.zomato.com/api#headline1" target="_blank">Zomato</a> as images that we can then click and view in a new tab.  *Consider the limitations and if a user searches a location that may have less than 3 restaurants listed.</p>
+            </div>
+
+            <button class='btn btn-outline-warning btn-block btn-sm hintBTN' onmousedown="hint()">hints...</button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Understood</button>
         </div>
     </div>
+</div>
+</div>
 
-    <!-- DO NOT ALTER ABOVE MODAL CODE -->
+<script>
+let n = 0;
+
+let hint = () => {
+
+    const hints = [
+    'There are a total of 39 errors.', 'JS Tracking = console.log()', 'Check for TYPSO!', 'What\'s the difference between class in HTML vs JavaScript?', 'I just had a Math.random() thought','How can you test for conditions that may change later? **cough** dummy variables **cough**', 'One API may have a limit as to how many times you can call it over a period of time.','Async AND Await', 'The semi-colon is vital when we style!', 'Duck Duck Google', 'What are headers? - zomato...', 'fetch and theeeeennnn?', 'Is my # needed here?', 'What could we add to event listeners?', 'Whether we invoke this or that...', 'Looks like it\'s locked... probably consider a key.', 'Beware of the Revisible Man!', 'Maybe freezing is multiplied by 1.8 then we add...', 'Whether you have styles or not... ', 'Drilling objects means we find what we want!', 'Children... perhaps we append them?', 'While here, what should we remove?', 'I put 3.541 rugs on these tMath.floor()s.', 'Passed the num!', 'What\'s the opposite of an endless loop?', 'When hungry - getFood!', 'How long do we stand in time out?'
+    ];
+    
+    alert(hints[n]);
+    n === hints.length - 1 ? n = 0 : n++
+    } 
+
+</script>
+
+<!-- DO NOT ALTER ABOVE MODAL CODE -->
 
 
     <!-- BOOTSTRAP -->

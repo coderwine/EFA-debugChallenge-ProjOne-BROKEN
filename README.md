@@ -3,7 +3,7 @@
 **Main Concept:**
 - This challenge has three different APIs that we are trying to fix.  The purpose of this challenge is to practice debugging a broken application to get it into a working format.  **DO NOT MODIFY THE MODAL**.  There are comments in the code warning against this.  EVERYTHING else is fair game.
 
-- We are using Bootstrap and customized CSS.  Each API has its own JS and CSS files.  This isn't the cleanest code when completed but functional. This is not the fastest app. Feel free to clean it up if you so desire.  It will be important to consider the limitations of the APIs being used and read the docs provided.  In all levels of the challenge, it will be expected to fix issues within the JS and CSS files (possibly in relation to the HTML).  Remember to use console.log() to your advantage.
+- We are using Bootstrap and customized CSS.  Each API has its own JS and CSS files.  This isn't the cleanest code when completed but functional. This is not the fastest app. Feel free to clean it up if you so desire.  It will be important to consider the limitations of the APIs being used and read the docs provided.  In all levels of the challenge, it will be expected to fix issues within the JS and CSS files (possibly in relation to the HTML).  If you get stuck, there's a "hint" button within the modal.
 
 **Bronze:**
 - You will be focused on getting the Quote API functional.  Here is the link to the documentation for the Quote API.  The goal is to trigger a quote at the bottom of the page whenever the Submit Button is CLICKED.
